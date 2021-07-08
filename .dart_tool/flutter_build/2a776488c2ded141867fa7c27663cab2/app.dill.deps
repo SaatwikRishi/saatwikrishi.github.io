@@ -4,11 +4,13 @@ file:///home/bahubully/Documents/codes/portfolio/lib/ListItems/ContactSection.da
 file:///home/bahubully/Documents/codes/portfolio/lib/ListItems/HomeSection.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/ListItems/ProjectsSection.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/ListItems/SkillsSections.dart
+file:///home/bahubully/Documents/codes/portfolio/lib/Providers/GlobalControllers.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Providers/SizeProvider.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Providers/global_var.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Providers/home_icons_icons.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Widgets/CustomScaffold.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Widgets/LeftSideBar.dart
+file:///home/bahubully/Documents/codes/portfolio/lib/Widgets/SKillPercentageView.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/Widgets/SkillsView.dart
 file:///home/bahubully/Documents/codes/portfolio/lib/main.dart
 file:///home/bahubully/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0/lib/characters.dart

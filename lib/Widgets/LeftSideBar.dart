@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Providers/SizeProvider.dart';
 import 'package:portfolio/Providers/global_var.dart';
-import 'package:portfolio/main.dart';
 
 class LeftSideBarClosed extends StatelessWidget {
   final Function fn;

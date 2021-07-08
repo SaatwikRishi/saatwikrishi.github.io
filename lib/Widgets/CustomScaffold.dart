@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Providers/SizeProvider.dart';
+import 'package:portfolio/Providers/global_var.dart';
 import 'package:portfolio/Widgets/LeftSideBar.dart';
 
 class CustomScaffold extends StatefulWidget {
@@ -21,7 +22,27 @@ class _CustomScaffoldState extends State<CustomScaffold> {
   }
 
   @override
+  void initState() {
+    print("INIT");
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    if (!widget.controller!.hasListeners)
+      widget.controller!.addListener(() {
+        final currentpage = widget.controller!.offset;
+
+        if (currentpage >
+                SizeProvider.getsize(context).height -
+                    SizeProvider.getsize(context).height * 0.2 &&
+            !enablePercentageAnimation.value) {
+          setState(() {
+            enablePercentageAnimation.value = true;
+          });
+        }
+      });
     final size = SizeProvider.getsize(context);
     return Scaffold(
       onDrawerChanged: (f) {

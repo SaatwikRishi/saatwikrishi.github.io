@@ -3,6 +3,7 @@ import 'package:portfolio/ListItems/ContactSection.dart';
 import 'package:portfolio/ListItems/HomeSection.dart';
 import 'package:portfolio/ListItems/ProjectsSection.dart';
 import 'package:portfolio/ListItems/SkillsSections.dart';
+import 'package:portfolio/Providers/GlobalControllers.dart';
 import 'package:portfolio/Providers/SizeProvider.dart';
 import 'package:portfolio/Providers/global_var.dart';
 import 'package:portfolio/Widgets/CustomScaffold.dart';
@@ -30,14 +31,14 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final globalController = ScrollController();
+  final globalController = ScrollController(debugLabel: "LOL");
   final BoxConstraints constraints;
   HomePage(this.constraints);
   final _list = [
+    ContactSection(),
     HomeSection(),
     SkillSection(),
     ProjectSection(),
-    ContactSection()
   ];
   @override
   Widget build(BuildContext context) {
@@ -45,10 +46,10 @@ class HomePage extends StatelessWidget {
     isSmall = SizeProvider.getsize(context).width < 1200;
 
     return CustomScaffold(
-      controller: globalController,
+      controller: this.globalController,
       constraints: this.constraints,
       child: ListView.builder(
-        controller: globalController,
+        controller: this.globalController,
         shrinkWrap: true,
         itemCount: _list.length,
         itemBuilder: (context, i) => Container(
